@@ -1,15 +1,20 @@
 import { getKey, Variables } from "./storage-helper.js";
-import { buttonSubmit, getBlockedSitesCount, setTextAreaValue } from "./form-helper.js";
+import {
+  buttonSubmit,
+  getBlockedSitesCount,
+  setTextAreaValue,
+} from "./form-helper.js";
 
 // // 1. SET VARIABLES TO THE STATISTICS BLOCK
-// Variables to be used 
-let blockedSitesCount = await getBlockedSitesCount() || 0;
-let preventedAccessCount = await getKey(Variables.BLOCKED_ACCESS_PREVENTED_COUNT) || 0;
-    
-addEventListener("DOMContentLoaded", (event) => { })    
+// Variables to be used
+let blockedSitesCount = (await getBlockedSitesCount()) || 0;
+let preventedAccessCount =
+  (await getKey(Variables.BLOCKED_ACCESS_PREVENTED_COUNT)) || 0;
+
+addEventListener("DOMContentLoaded", (event) => {});
 
 // Get paragraphs
-let blockedSitesCountP =  document.getElementById("blocked-sites-count");
+let blockedSitesCountP = document.getElementById("blocked-sites-count");
 let preventedAccessCountP = document.getElementById("prevented-access-count");
 
 // Modify the paragraph's inner HTML
@@ -19,7 +24,9 @@ preventedAccessCountP.innerHTML = `Preventing you from entering blocked websites
 // // 2. SET VARIABLES TO THE BLOCKED SITES TEXT AREAS
 // get blocked sites lists
 let fullPathBlockedSites = await getKey(Variables.FULL_PATH_BLOCKED_SITES);
-let startsWithPathBlockedSites = await getKey(Variables.STARTS_WITH_BLOCKED_SITES);
+let startsWithPathBlockedSites = await getKey(
+  Variables.STARTS_WITH_BLOCKED_SITES
+);
 let endsWithPathBlockedSites = await getKey(Variables.ENDS_WITH_BLOCKED_SITES);
 let containsPathBlockedSites = await getKey(Variables.CONTAINS_BLOCKED_SITES);
 
@@ -45,18 +52,40 @@ setTextAreaValue(customImgVar, customImgTextArea);
 
 // // 3. SET THE CONTENT OF EACH TEXT AREA TO THE LOCAL STORAGE
 // get buttons
-let fullPathButton = document.getElementById("full-path-button")
-let startsWithButton = document.getElementById("starts-with-button")
-let endsWithButton = document.getElementById("ends-with-button")
-let containsButton = document.getElementById("contains-button")
+let fullPathButton = document.getElementById("full-path-button");
+let startsWithButton = document.getElementById("starts-with-button");
+let endsWithButton = document.getElementById("ends-with-button");
+let containsButton = document.getElementById("contains-button");
 let customButton = document.getElementById("custom-button");
 
 // update local storage upon submitting text areas
-buttonSubmit(fullPathButton, Variables.FULL_PATH_BLOCKED_SITES, fullPathTextArea);
-buttonSubmit(startsWithButton, Variables.STARTS_WITH_BLOCKED_SITES, startsWithTextArea);
-buttonSubmit(endsWithButton, Variables.ENDS_WITH_BLOCKED_SITES, endsWithTextArea);
-buttonSubmit(containsButton, Variables.CONTAINS_BLOCKED_SITES, containsTextArea);
-buttonSubmit(customButton, Variables.BLOCK_PAGE_CUSTOM_IMG_URL, customImgTextArea);
-buttonSubmit(customButton, Variables.BLOCK_PAGE_CUSTOM_TEXT, customTextTextArea);
-
-
+buttonSubmit(
+  fullPathButton,
+  Variables.FULL_PATH_BLOCKED_SITES,
+  fullPathTextArea
+);
+buttonSubmit(
+  startsWithButton,
+  Variables.STARTS_WITH_BLOCKED_SITES,
+  startsWithTextArea
+);
+buttonSubmit(
+  endsWithButton,
+  Variables.ENDS_WITH_BLOCKED_SITES,
+  endsWithTextArea
+);
+buttonSubmit(
+  containsButton,
+  Variables.CONTAINS_BLOCKED_SITES,
+  containsTextArea
+);
+buttonSubmit(
+  customButton,
+  Variables.BLOCK_PAGE_CUSTOM_IMG_URL,
+  customImgTextArea
+);
+buttonSubmit(
+  customButton,
+  Variables.BLOCK_PAGE_CUSTOM_TEXT,
+  customTextTextArea
+);

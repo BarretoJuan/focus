@@ -1,60 +1,109 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="/static/styles.css"></style>
-        <link rel="icon" type="image/x-icon" href="/static/icons/extension_icon128.png">
-        <title>Focus Extension</title>
-    </head>
-    <body>
-        <section class="main-block-card">
-            <h1 class="center-txt">Focus Extension</h1>
-            <p class="center-txt">Block websites that take your focus away</p>
-            <h2 class="center-txt">So far, we have helped you with:</h2>
-            <section class="row">
-                <p class="center-txt row-element" id="blocked-sites-count">Blocking {n} websites</p>
-                <p class="center-txt row-element" id ="prevented-access-count">Preventing you from entering blocked websites {n} times</p>
-            </section>
-        </section>
+  <head>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/static/icons/extension_icon128.png"
+    />
+    <title>Focus Extension</title>
+  </head>
+  <body>
+    <section class="main-block-card">
+      <h1 class="center-txt">Focus Extension</h1>
+      <p class="center-txt">Block websites that take your focus away</p>
+      <h2 class="center-txt">So far, we have helped you with:</h2>
+      <section class="row">
+        <p class="center-txt row-element" id="blocked-sites-count">
+          Blocking {n} websites
+        </p>
+        <p class="center-txt row-element" id="prevented-access-count">
+          Preventing you from entering blocked websites {n} times
+        </p>
+      </section>
+    </section>
 
+    <section class="main-block-card margin-top">
+      <p class="center-txt title">Sites Blocked by their full URL</p>
+      <p class="center-txt sub-title">Full-URL Block</p>
+      <textarea
+        class="text-area"
+        placeholder="Enter your sites to block in this format: url1, url2, url3..."
+        id="full-path-blocked-sites"
+      ></textarea>
+      <button class="row-button" name="full-path-button" id="full-path-button">
+        Save
+      </button>
+    </section>
 
-        <section class="main-block-card margin-top">
-            <p class="center-txt title">Sites Blocked by their full URL</p>
-            <p class="center-txt sub-title">Full-URL Block</p>
-            <textarea class="text-area" placeholder="Enter your sites to block in this format: url1, url2, url3..." id="full-path-blocked-sites"></textarea>
-            <button class="row-button" name="full-path-button" id="full-path-button" >Save</button>
-        </section>
+    <section class="main-block-card margin-top">
+      <p class="center-txt title">Sites Blocked by the start of their URL</p>
+      <p class="center-txt sub-title">
+        Sites blocked that start with a given structure
+      </p>
+      <textarea
+        class="text-area"
+        placeholder="Enter your sites to block in this format: url1, url2, url3..."
+        id="starts-with-blocked-sites"
+      ></textarea>
+      <button
+        class="row-button"
+        name="starts-with-button"
+        id="starts-with-button"
+      >
+        Save
+      </button>
+    </section>
 
-        <section class="main-block-card margin-top">
-            <p class="center-txt title">Sites Blocked by the start of their URL</p>
-            <p class="center-txt sub-title">Sites blocked that start with a given structure</p>
-            <textarea class="text-area" placeholder="Enter your sites to block in this format: url1, url2, url3..." id="starts-with-blocked-sites"></textarea>
-            <button class="row-button" name="starts-with-button" id="starts-with-button" >Save</button>
-        </section>
+    <section class="main-block-card margin-top">
+      <p class="center-txt title">Sites Blocked by the end of their URL</p>
+      <p class="center-txt sub-title">
+        Sites blocked that end with a given structure
+      </p>
+      <textarea
+        class="text-area"
+        placeholder="Enter your sites to block in this format: url1, url2, url3..."
+        id="ends-with-blocked-sites"
+      ></textarea>
+      <button class="row-button" name="ends-with-button" id="ends-with-button">
+        Save
+      </button>
+    </section>
 
+    <section class="main-block-card margin-top">
+      <p class="center-txt title">Sites Blocked the content of their URL</p>
+      <p class="center-txt sub-title">
+        Sites blocked that contain a given structure
+      </p>
+      <textarea
+        class="text-area"
+        placeholder="Enter your sites to block in this format: url1, url2, url3..."
+        id="contains-blocked-sites"
+      ></textarea>
+      <button class="row-button" name="contains-button" id="contains-button">
+        Save
+      </button>
+    </section>
 
-        <section class="main-block-card margin-top">
-            <p class="center-txt title">Sites Blocked by the end of their URL</p>
-            <p class="center-txt sub-title">Sites blocked that end with a given structure</p>
-            <textarea class="text-area" placeholder="Enter your sites to block in this format: url1, url2, url3..." id="ends-with-blocked-sites"></textarea>
-            <button class="row-button" name="ends-with-button" id="ends-with-button">Save</button>
-        </section>
-
-
-        <section class="main-block-card margin-top">
-            <p class="center-txt title">Sites Blocked the content of their URL</p>
-            <p class="center-txt sub-title">Sites blocked that contain a given structure</p>
-            <textarea class="text-area" placeholder="Enter your sites to block in this format: url1, url2, url3..." id="contains-blocked-sites"></textarea>
-            <button class="row-button" name="contains-button" id="contains-button" >Save</button>
-        </section>
-
-        <section class="main-block-card margin-top">
-            <p class="center-txt title">Customize blocked site page</p>
-            <p class="center-txt sub-title">Customize the text and img shown on the blocked sited template</p>
-            <textarea class="text-area" placeholder="Enter your custom text" id="custom-txt"></textarea>
-            <textarea class="text-area" placeholder="Enter your custom image url" id="custom-img"></textarea>
-            <button class="row-button" name="custom-button" id="custom-button" >Save</button>
-        </section>
-
-
-    </body>   
-    <script type="module" src="/js/home-page-variables.js"></script> 
+    <section class="main-block-card margin-top">
+      <p class="center-txt title">Customize blocked site page</p>
+      <p class="center-txt sub-title">
+        Customize the text and img shown on the blocked sited template
+      </p>
+      <textarea
+        class="text-area"
+        placeholder="Enter your custom text"
+        id="custom-txt"
+      ></textarea>
+      <textarea
+        class="text-area"
+        placeholder="Enter your custom image url"
+        id="custom-img"
+      ></textarea>
+      <button class="row-button" name="custom-button" id="custom-button">
+        Save
+      </button>
+    </section>
+  </body>
+  <script type="module" src="/js/home-page-variables.js"></script>
 </html>

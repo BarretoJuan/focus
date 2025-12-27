@@ -1,124 +1,122 @@
 .main-block-card {
-    margin-left: auto;
-    margin-right: auto;
-    width: 60vw;
-    padding: 2vh;
-    background-color: #012b63;
-    border-radius: 30px;
-    
+  margin-left: auto;
+  margin-right: auto;
+  width: 60vw;
+  padding: 2vh;
+  background-color: #012b63;
+  border-radius: 30px;
 }
 .main-block-card-img {
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 60vw;
-    padding: 2vh;
-    background-color: #012b63;
-    border-radius: 30px;
-    
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 60vw;
+  padding: 2vh;
+  background-color: #012b63;
+  border-radius: 30px;
 }
 
 img {
-    width: 30vw;
-    border-radius: 14px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3vh;
-    margin-bottom: 3vh;
+  width: 30vw;
+  border-radius: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
 }
 
 .center-txt {
-    text-align: center;
-    color:#faebd7;
-    font-family: 'Trebuchet MS', sans-serif;
+  text-align: center;
+  color: #faebd7;
+  font-family: "Trebuchet MS", sans-serif;
 }
 
 .row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3vh;
 }
 
 .row-element {
-    width: 33%;
-    border-radius: 12px;
-    background-color: #024193;
-    margin-left: 0.5vw;
-    margin-right: 0.5vw;
-    height: auto;
-    padding: 10px;
-    font-weight: bold;
+  width: 33%;
+  border-radius: 12px;
+  background-color: #024193;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+  height: auto;
+  padding: 10px;
+  font-weight: bold;
 }
 
 .margin-top {
-    margin-top: 2vh;
+  margin-top: 2vh;
 }
 
 .row-button {
-    width: 10vw;
-    border-radius: 12px;
-    background-color: #001c42;
-    border-style: none;
-    color: #faebd7;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    font-size: large;
-    font-weight: bold;
+  width: 10vw;
+  border-radius: 12px;
+  background-color: #001c42;
+  border-style: none;
+  color: #faebd7;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  font-size: large;
+  font-weight: bold;
 }
 
 .row-button:hover {
-     background-color: #00142e;
+  background-color: #00142e;
 }
 p {
-    font-size: large;
-    margin: 0;
+  font-size: large;
+  margin: 0;
 }
 
 h2 {
-    font-size: x-large;
-    margin-top: 2vh;
-    margin-bottom: 1vh;
+  font-size: x-large;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
 }
 
 h1 {
-    font-size: xx-large;
-    margin: 0;
+  font-size: xx-large;
+  margin: 0;
 }
 
 textarea {
-    resize: none;
-    width: 100%;
-    height: auto;
-    border-style: none;
-    field-sizing: content;
-    margin: 2vh 0 1vh 0;
-    border-radius: 12px;
-    border-color: #024193;
-    padding: 5px 5px 0 10px;
-    color:#faebd7;
-    font-family: 'Trebuchet MS', sans-serif;
-    font-size: medium;
-    background-color:#024193;
+  resize: none;
+  width: 100%;
+  height: auto;
+  border-style: none;
+  field-sizing: content;
+  margin: 2vh 0 1vh 0;
+  border-radius: 12px;
+  border-color: #024193;
+  padding: 5px 5px 0 10px;
+  color: #faebd7;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: medium;
+  background-color: #024193;
 }
 
 textarea::placeholder {
-    border-radius: 12px;
-    border-color: #024193;
-    color:#faebd7;
-    font-family: 'Trebuchet MS', sans-serif;
-    font-size: medium;
-    background-color:#024193;
+  border-radius: 12px;
+  border-color: #024193;
+  color: #faebd7;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: medium;
+  background-color: #024193;
 }
 
 textarea::selection {
-    border-style: none;
+  border-style: none;
 }
 
 textarea::-webkit-scrollbar {
@@ -130,21 +128,20 @@ textarea::-webkit-scrollbar-thumb {
   border-radius: 14px;
 }
 
-
 .title {
-    font-size: x-large;
-    font-weight: bold;
-    margin: 0;
+  font-size: x-large;
+  font-weight: bold;
+  margin: 0;
 }
 
 .sub-title {
-    font-size: large;
-    font-weight: bold;
-    margin: 1vh 0 0 0;
+  font-size: large;
+  font-weight: bold;
+  margin: 1vh 0 0 0;
 }
 
 body {
-    background-color: #bcd8fc;
+  background-color: #bcd8fc;
 }
 
 @media (max-width: 700px) {
@@ -157,7 +154,6 @@ body {
   }
 
   .row-element {
-    
     border-radius: 12px;
     width: 80%;
     background-color: #024193;
@@ -166,6 +162,5 @@ body {
     height: auto;
     padding: 10px;
     font-weight: bold;
-}
-
+  }
 }

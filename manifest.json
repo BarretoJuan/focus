@@ -7,28 +7,24 @@
     "default_popup": "/templates/popup.html",
     "default_icon": "/static/icons/extension_icon128.png"
   },
-   "icons": {
-   "16": "/static/icons/extension_icon16.png",
-   "32": "/static/icons/extension_icon32.png",
-   "48": "/static/icons/extension_icon48.png",
-   "128": "/static/icons/extension_icon128.png"
- },
-  "permissions": [
-    "storage"
-  ],
+  "icons": {
+    "16": "/static/icons/extension_icon16.png",
+    "32": "/static/icons/extension_icon32.png",
+    "48": "/static/icons/extension_icon48.png",
+    "128": "/static/icons/extension_icon128.png"
+  },
+  "permissions": ["storage"],
   "content_scripts": [
     {
       "js": ["./js/storage-helper.js", "./content-script/redirect-blocked.js"],
-      "type":"module",
-      "matches": [
-         "*://*/*"
-      ]
+      "type": "module",
+      "matches": ["*://*/*"]
     }
   ],
   "web_accessible_resources": [
     {
       "resources": ["/templates/blocked-page.html"],
-      "matches": [ "*://*/*" ]
+      "matches": ["*://*/*"]
     }
   ]
 }
