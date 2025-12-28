@@ -55,18 +55,3 @@ export async function clearKey(key) {
   return true;
 }
 
-/** 
-   @description Helper function to get all keys and values
-   @returns {Object[]}: List of objects with their corresponding keys and values
-*/
-export async function getAllKeys() {
-  // Get all keys
-  let foundKeys = await chrome.storage.local.getKeys();
-
-  // Map each key with its corresponding value
-  let output = [];
-  await foundKeys.map(async (key) => {
-    output.push({ [key]: await getKey([key]) });
-  });
-  return output;
-}

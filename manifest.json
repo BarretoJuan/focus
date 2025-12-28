@@ -1,7 +1,7 @@
 {
   "name": "Focus Extension",
   "description": "Allows blocking websites to improve focus",
-  "version": "1.0",
+  "version": "1.1",
   "manifest_version": 3,
   "action": {
     "default_popup": "/templates/popup.html",
@@ -16,7 +16,7 @@
   "permissions": ["storage"],
   "content_scripts": [
     {
-      "js": ["./js/storage-helper.js", "./content-script/redirect-blocked.js"],
+      "js": ["./content-script/redirect-blocked.js"],
       "type": "module",
       "matches": ["*://*/*"]
     }
