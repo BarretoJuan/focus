@@ -5,18 +5,15 @@ const blockedPageUrl = `chrome-extension://${extensionId}/templates/blocked-page
 // current url
 let url = window.location.href.toLowerCase();
 
-// check if the current page is blocked
-isPageBlocked(url).then(async pageBlocked => {
-    // if so, redirect to the blocked page
-    if (pageBlocked) {
-        
-        //increase blocked counter
-        let blockedCounter = await getKey("blocked_access_prevented_count");
-        blockedCounter ? blockedCounter : blockedCounter = 0;
-        await setKey("blocked_access_prevented_count", blockedCounter + 1);
-        window.location.href = blockedPageUrl;
-    }
-});
+// check current url to redirect
+redirectBlockedPage(url);
+
+// check for url changes, if the url changes, re-execute redirectBlockedPage()
+// this is necessary in order for the extension to work properly inside SPAs
+// it happens when a SPA produces a change in URL, without actually doing a reload in the browser
+    window.navigation.onnavigate = (event) => {
+        redirectBlockedPage(event.destination.url);
+}
 
 /**
  * @description Helper function that checks if the given url is among the list of blocked websites
@@ -64,6 +61,26 @@ async function isPageBlocked(url) {
      }
 
      return false;
+}
+
+/**
+ * @description Helper function that redirects the current url to the block page if needed
+ * @param {string} url: url to be checked
+ */
+async function redirectBlockedPage(url) {
+
+// check if the current page is blocked
+let pageBlocked = await isPageBlocked(url);
+
+//if page is blocked, increase the internal counter and redirect
+if (pageBlocked) {
+    //increase blocked counter
+    let blockedCounter = await getKey("blocked_access_prevented_count");
+    blockedCounter ? blockedCounter : blockedCounter = 0;
+    await setKey("blocked_access_prevented_count", blockedCounter + 1);
+    // redirect
+    window.location.replace(blockedPageUrl);
+}
 }
 
 // copied and pasted functions from storage-helper.js
