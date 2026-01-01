@@ -1,6 +1,6 @@
 {
-  "name": "Focus Extension",
-  "description": "Allows blocking websites to improve focus",
+  "name": "Focus - Productivity Boost, Website Blocker",
+  "description": "Block websites and improve your focus",
   "version": "1.2",
   "manifest_version": 3,
   "action": {
