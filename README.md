@@ -1,6 +1,5 @@
 # Focus: Chrome Extension
-# Video Demo: https://www.youtube.com/watch?v=FJUAH0t0Lrc
-# Description: Customizable Chrome Extension to block websites, avoiding distractions and helping productivity
+Customizable Chrome Extension to block websites, avoiding distractions and helping productivity
 
 ## What is focus?
 Nowadays, technology is very prevalent in all aspects of life, including at work, study and entertainment. That fact, along with the rise of highly-engaging content in social media represents a challenge for many people's concentration. For that reason, I decided to develop a Chrome extension that aimed to help in that matter. Providing its users with a tool to boost their productivity, and keeping more control on the entertainment they consume on the internet.
