@@ -1,6 +1,5 @@
 // get the extension's id
-const extensionId = chrome.runtime.id;
-const blockedPageUrl = `chrome-extension://${extensionId}/templates/blocked-page.html`;
+const blockedPageUrl = browser.runtime.getURL("templates/blocked-page.html");
 
 // current url
 let url = window.location.href.toLowerCase();
@@ -11,9 +10,15 @@ redirectBlockedPage(url);
 // check for url changes, if the url changes, re-execute redirectBlockedPage()
 // this is necessary in order for the extension to work properly inside SPAs
 // it happens when a SPA produces a change in URL, without actually doing a reload in the browser
-    window.navigation.onnavigate = (event) => {
-        redirectBlockedPage(event.destination.url);
-}
+let lastUrl = window.location.href.toLowerCase();
+
+setInterval(() => {
+    url = window.location.href.toLowerCase();
+    if (url !== lastUrl) {
+        lastUrl = url; 
+        redirectBlockedPage(url);
+    }
+}, 500); // Check every 500ms
 
 /**
  * @description Helper function that checks if the given url is among the list of blocked websites
