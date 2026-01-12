@@ -17,9 +17,9 @@ addEventListener("DOMContentLoaded", (event) => {});
 let blockedSitesCountP = document.getElementById("blocked-sites-count");
 let preventedAccessCountP = document.getElementById("prevented-access-count");
 
-// Modify the paragraph's inner HTML
-blockedSitesCountP.innerHTML = `Blocking ${blockedSitesCount} websites`;
-preventedAccessCountP.innerHTML = `Preventing you from entering blocked websites ${preventedAccessCount} times`;
+// Modify the paragraph's inner text content
+blockedSitesCountP.textContent = `Blocking ${blockedSitesCount} websites`;
+preventedAccessCountP.textContent = `Preventing you from entering blocked websites ${preventedAccessCount} times`;
 
 // // 2. SET VARIABLES TO THE BLOCKED SITES TEXT AREAS
 // get blocked sites lists
