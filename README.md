@@ -1,10 +1,10 @@
-# Focus: Chrome Extension
-Customizable Chrome Extension to block websites, avoiding distractions and helping productivity
+# Focus: Web Extension
+Customizable Web Extension to block websites, avoiding distractions and helping productivity
 
 ## What is focus?
-Nowadays, technology is very prevalent in all aspects of life, including at work, study and entertainment. That fact, along with the rise of highly-engaging content in social media represents a challenge for many people's concentration. For that reason, I decided to develop a Chrome extension that aimed to help in that matter. Providing its users with a tool to boost their productivity, and keeping more control on the entertainment they consume on the internet.
+Nowadays, technology is very prevalent in all aspects of life, including at work, study and entertainment. That fact, along with the rise of highly-engaging content in social media represents a challenge for many people's concentration. For that reason, I decided to develop a Web extension that aimed to help in that matter. Providing its users with a tool to boost their productivity, and keeping more control on the entertainment they consume on the internet.
 
-**Focus** is a highly customizable Chrome extension that allows users to block websites, following different patterns, in order to prevent getting distracted from doing important matters. The objective of this project is to help people's productivity by encouraging them to avoid getting their attention taken away by entertainment or social media.
+**Focus** is a highly customizable Web extension that allows users to block websites, following different patterns, in order to prevent getting distracted from doing important matters. The objective of this project is to help people's productivity by encouraging them to avoid getting their attention taken away by entertainment or social media.
 
 ## Features
 This extension enables users to fully tailor the way in which they prevent getting distracted on the internet. Its main features are: 
@@ -19,7 +19,7 @@ This extension enables users to fully tailor the way in which they prevent getti
 This section will delve into the technical details that define the working of Focus, thoroughly documenting each part of the project's directory tree, so that any developer can understand the way the extension achieves its different functionalities.
 
 ### manifest.json
-This file describes important information on the chrome extension. Including elements like the extension's name, description, icons, permissions and resources. This file corresponds to a ManifestV3 for a Chrome extension. [See more at](https://developer.chrome.com/docs/extensions/reference/manifest)
+This file describes important information on the web extension. Including elements like the extension's name, description, icons, permissions and resources. This file corresponds to a ManifestV3 for a Web extension. [See more at](https://developer.chrome.com/docs/extensions/reference/manifest)
 
 ### /templates folder
 Includes the html templates used within the extension.
